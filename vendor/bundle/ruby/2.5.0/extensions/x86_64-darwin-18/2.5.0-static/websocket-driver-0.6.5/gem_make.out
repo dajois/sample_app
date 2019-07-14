@@ -1,0 +1,15 @@
+current directory: /Users/dajo/rbwork/environment/sample_app/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/dajo/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20190714-21291-1dbrds4.rb extconf.rb
+creating Makefile
+
+current directory: /Users/dajo/rbwork/environment/sample_app/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/dajo/rbwork/environment/sample_app/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/dajo/rbwork/environment/sample_app/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20190714-21291-ho4wvz
