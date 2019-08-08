@@ -1,6 +1,6 @@
 module SessionsHelper
   def log_in(user)
-    :session[:user_id] = user.id
+    session[:user_id] = user.id
   end
 
   #現在ログイン中のユーザを返す(いる場合)
