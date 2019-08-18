@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token
   before_save { email.downcase! }
   validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
@@ -18,5 +19,11 @@ class User < ApplicationRecord
   #ランダムなトークンを返す
   def User.new_token
     SecureRandom.urlsafe_base64
+  end
+
+  #永続セッションのためにデータベースに記憶する
+  def remember
+    self.remember_token = User.new_token        #記憶トークンをremember_tokenに代入
+    update_attribute(:remember_digest, User.digest(remember_token)) #DBのremember_token属性値をBcryptに渡してハッシュ化して更新
   end
 end
