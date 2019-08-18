@@ -3,6 +3,10 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
+  def remember(user)
+    user.remember
+    cookies.parmanent.signed[:user_id] = user.id
+    cookies.parmanent[:remember_token] = user.remember_token
   #現在ログイン中のユーザを返す(いる場合)
   def current_user
     if session[:user_id]
